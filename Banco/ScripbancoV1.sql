@@ -44,14 +44,12 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `mydb`.`turno` ;
 
-CREATE TABLE IF NOT EXISTS `mydb`.`turno` (
-  `Codigo_turno` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `manha` TINYINT NOT NULL,
-  `tarde` TINYINT NOT NULL,
-  `noite` TINYINT NOT NULL,
-  PRIMARY KEY (`Codigo_turno`))
+CREATE TABLE IF NOT EXISTS `mydb`.`turno`
+ (
+  `Codigo_turno` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+  `Descricao` varchar(5) NOT NULL    
+  )
 ENGINE = InnoDB;
-
 
 -- -----------------------------------------------------
 -- Table `mydb`.`Funcionario`
