@@ -1,19 +1,24 @@
 use mydb;
 
 insert into setor(descricao)values
-(
-  "TI",
-  "Adiminstração",
-  "RH",
-  "Contabilidade",
-  "Atendimento",
-  "Governancia"
-);
+("TI"),
+("Adiminstração"),
+("RH"),
+("Contabilidade"),
+("Atendimento"),
+("Governancia")
+;
 
 insert into turno(descricao)values
   ("Manha"),
   ("Tarde"),
   ("Noite");
+  
+insert into funcao(descricao)values
+  ("Analista"),
+  ("Técnico"),
+  ("Gerente"),
+  ("auxiliar");
   
 
 insert into funcionario(matricula,login,senha,nome,email,ramal,FK_setor,FK_funcao,FK_turno)values
@@ -24,13 +29,3 @@ insert into funcionario(matricula,login,senha,nome,email,ramal,FK_setor,FK_funca
   ("753654","teste5","123789","Eduardo teste5","teste5@teste.com","856",5,4,3);
   
 select*from funcionario;
-
-
-select f.nome,f.matricula,f.email,f.ramal,s.descricao as Setor,fc.descricao as Funçao ,t.descricao as Turno
-from funcionario f
-inner join setor s on s.descricao = f.fk_setor 
-inner join funcao fc on f.FK_funcao = fc.descricao
-inner join turno t on f.FK_turno = t.descricao ;
-
-
-
