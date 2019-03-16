@@ -1,4 +1,6 @@
-
+/* input[type="password"] {
+  color: transparent;
+} */
 
 
 
@@ -36,8 +38,7 @@
 
 body, html {
 	height: 100%;
-	font-family: Poppins-Regular, sans-serif;
-	background-color:#efefef;
+  font-family: Poppins-Regular, sans-serif;
 }
 
 /*---------------------------------------------*/
@@ -59,6 +60,7 @@ a:focus {
 
 a:hover {
 	text-decoration: none;
+  color: #fff;
 }
 
 /*---------------------------------------------*/
@@ -126,6 +128,11 @@ textarea:-moz-placeholder {color: #999999;}
 textarea::-moz-placeholder {color: #999999;}
 textarea:-ms-input-placeholder {color: #999999;}
 
+label {
+  display: block;
+  margin: 0;
+}
+
 /*---------------------------------------------*/
 button {
 	outline: none !important;
@@ -142,12 +149,24 @@ iframe {
 }
 
 
-
+/*//////////////////////////////////////////////////////////////////
+[ Utility ]*/
+.txt1 {
+  font-family: Poppins-Regular;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #999999;
+}
 
 /*//////////////////////////////////////////////////////////////////
-[ Contact ]*/
+[ login ]*/
 
-.container-contact100 {
+.limiter {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-login100 {
   width: 100%;  
   min-height: 100vh;
   display: -webkit-box;
@@ -159,21 +178,11 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: transparent;
-  position: relative;
-  z-index: 1;
+  background: #ceceff;
 }
 
-.contact100-map {
-  position: absolute;
-  z-index: -2;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
 
-.wrap-contact100 {
+.wrap-login100 {
   width: 670px;
   background: #fff;
   border-radius: 10px;
@@ -183,7 +192,7 @@ iframe {
 
 /*==================================================================
 [ Title form ]*/
-.contact100-form-title {
+.login100-form-title {
   width: 100%;
   position: relative;
   z-index: 1;
@@ -200,10 +209,10 @@ iframe {
   background-size: cover;
   background-position: center;
 
-  padding: 64px 15px 64px 15px;
+  padding: 70px 15px 74px 15px;
 }
 
-.contact100-form-title-1 {
+.login100-form-title-1 {
   font-family: Poppins-Bold;
   font-size: 20px;
   color: #fff;
@@ -212,7 +221,8 @@ iframe {
   padding-bottom: 7px;
 }
 
-.contact100-form-title-2 {
+
+.login100-form-title-2{
   font-family: Poppins-Regular;
   font-size: 15px;
   color: #fff;
@@ -220,8 +230,7 @@ iframe {
   text-align: center;
 }
 
-
-.contact100-form-title::before {
+.login100-form-title::before {
   content: "";
   display: block;
   position: absolute;
@@ -237,7 +246,7 @@ iframe {
 /*==================================================================
 [ Form ]*/
 
-.contact100-form {
+.login100-form {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -246,7 +255,7 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 43px 88px 57px 190px;
+  padding: 43px 88px 93px 190px;
 }
 
 
@@ -257,7 +266,6 @@ iframe {
   width: 100%;
   position: relative;
   border-bottom: 1px solid #b2b2b2;
-  margin-bottom: 26px;
 }
 
 .label-input100 {
@@ -321,13 +329,6 @@ input.input100 {
 }
 
 
-textarea.input100 {
-  min-height: 115px;
-  padding-top: 14px;
-  padding-bottom: 13px;
-}
-
-
 .input100:focus + .focus-input100::before {
   width: 100%;
 }
@@ -336,10 +337,60 @@ textarea.input100 {
   width: 100%;
 }
 
+/*==================================================================
+[ Restyle Checkbox ]*/
+
+.input-checkbox100 {
+  display: none;
+}
+
+.label-checkbox100 {
+  font-family: Poppins-Regular;
+  font-size: 13px;
+  color: #999999;
+  line-height: 1.4;
+
+  display: block;
+  position: relative;
+  padding-left: 26px;
+  cursor: pointer;
+}
+
+.label-checkbox100::before {
+  content: "\f00c";
+  font-family: FontAwesome;
+  font-size: 13px;
+  color: transparent;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 2px;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.input-checkbox100:checked + .label-checkbox100::before {
+  color: #57b846;
+}
 
 /*------------------------------------------------------------------
 [ Button ]*/
-.container-contact100-form-btn {
+.container-login100-form-btn {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -347,10 +398,9 @@ textarea.input100 {
   display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
-  padding-top: 8px;
 }
 
-.contact100-form-btn {
+.login100-form-btn {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -375,28 +425,13 @@ textarea.input100 {
   transition: all 0.4s;
 }
 
-.contact100-form-btn i {
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-.contact100-form-btn:hover {
+.login100-form-btn:hover {
   background-color: #333333;
 }
 
-.contact100-form-btn:hover i {
-  -webkit-transform: translateX(10px);
-  -moz-transform: translateX(10px);
-  -ms-transform: translateX(10px);
-  -o-transform: translateX(10px);
-  transform: translateX(10px);
-}
+/* 2 BOTAO*/
 
-/*[Button 2]*/
-
-.container-contact100-form-btn2 {
+.container-login100-form-btn2 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -404,10 +439,9 @@ textarea.input100 {
   display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
-  padding-top: 8px;
 }
 
-.contact100-form-btn2 {
+.login100-form-btn2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -432,37 +466,21 @@ textarea.input100 {
   transition: all 0.4s;
 }
 
-.contact100-form-btn2 i {
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-.contact100-form-btn2:hover {
+.login100-form-btn2:hover {
   background-color: #333333;
 }
-
-.contact100-form-btn2:hover i {
-  -webkit-transform: translateX(10px);
-  -moz-transform: translateX(10px);
-  -ms-transform: translateX(10px);
-  -o-transform: translateX(10px);
-  transform: translateX(10px);
-}
-
 
 /*------------------------------------------------------------------
 [ Responsive ]*/
 
 @media (max-width: 576px) {
-  .contact100-form {
+  .login100-form {
     padding: 43px 15px 57px 117px;
   }
 }
 
 @media (max-width: 480px) {
-  .contact100-form {
+  .login100-form {
     padding: 43px 15px 57px 15px;
   }
 
