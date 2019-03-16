@@ -9,8 +9,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
   $senha = $_POST['password'];
   $matricula = $_POST['matricula'];
   $ramal = $_POST['ramal'];
+  $setor = $_POST['setor'];
+  $funcao = $_POST['funcao'];
 
-  if(insert($nome, $usuario, $email, $senha, $matricula, $ramal)){
+  if(insert($nome, $usuario, $email, $senha, $matricula, $ramal, $setor, $funcao)){
     echo 'Cadastro realizado com sucesso!';
   }
 

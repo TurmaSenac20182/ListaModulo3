@@ -3,13 +3,13 @@
 require 'funcoes.php';
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $nome = $_POST['Nnome'];
+    $nome = $_POST['name'];
 
     if(consutaNome($nome)) {
         echo 'Nome encontrado';
         die;
     } else {
-        echo 'Nome não encontrado';
+        echo 'Nome inexistente';
         die;
     }
 }
