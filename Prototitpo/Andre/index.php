@@ -14,7 +14,7 @@
     </head>
     <body>
         <div class="container">
-            <div class="btn-group" role="group" aria-label="Basic example">
+            <div class="btn-group" role="group" aria-label="Basic example" style="width: 50%;">
                 <div id="C1">
                     <p style="margin-top: 5%;">
                         <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#Iconsulta1" aria-expanded="false" aria-controls="collapseExample">
@@ -22,7 +22,7 @@
                         </button>
                     </p>
                 </div>
-                <div id="C2">
+                <div id="C2" style="margin-left: 2%; margin-right: 2%;">
                     <p style="margin-top: 5%;">
                         <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#Iconsulta2" aria-expanded="false" aria-controls="collapseExample">
                             consulta por ramal
@@ -40,7 +40,7 @@
             <div class="consulta1">
                 <div class="collapse" id="Iconsulta1">
                     <div class="card card-body">
-                        <form action="#" method="post">
+                        <form action="consultaNome.php" method="post">
                             <div class="form-group">
                                 <label for="Inome">Nome</label>
                                 <input type="text" class="form-control" id="Inome" name="Nnome" placeholder="Consulte o nome aqui">
@@ -66,7 +66,7 @@
             </div>
 
             <div class="consulta3">
-                
+
                 <div class="collapse" id="Iconsulta3">
                     <div class="card card-body">
                         <form action="#" method="post">
