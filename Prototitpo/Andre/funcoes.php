@@ -2,10 +2,10 @@
 
 require 'conexao.php';
 
-function insert($nome, $usuario, $email, $senha, $matricula, $ramal, $setor, $funcao) {
+function insert($nome, $usuario, $email, $senha, $matricula, $ramal, $setor, $funcao, $turno) {
     $link = conexao();
-    $query = "insert into funcionario(nome, usuario, email, senha, matricula, ramal, setor, funcao) 
-    values('{$nome}', '{$usuario}', '{$email}', '{$senha}', '{$matricula}', '{$ramal}', '{$setor}', '{$funcao}')";
+    $query = "insert into funcionario(nome, usuario, email, senha, matricula, ramal, setor, funcao, turno) 
+    values('{$nome}', '{$usuario}', '{$email}', '{$senha}', '{$matricula}', '{$ramal}', '{$setor}', '{$funcao}', '{$turno}')";
     
     mysqli_query($link, $query);
 
