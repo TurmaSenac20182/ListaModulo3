@@ -4,6 +4,7 @@
 	<title>Cadastro</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <!--===============================================================================================-->
 	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
 <!--===============================================================================================-->
@@ -27,8 +28,17 @@
 	<link rel="stylesheet" type="text/css" href="css/cadastro_util2.css">
 <!--===============================================================================================-->
 
-	<!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
--->
+<!--Função para apenas Números-->
+	<script>
+		function somenteNumeros(num) {
+			var er = /[^0-6.]/;
+			er.lastIndex = 0;
+			var campo = num;
+			if (er.test(campo.value)) {
+			campo.value = "";
+			}
+		}
+	</script>
 </head>
 <body>
 
@@ -47,40 +57,58 @@
 				</span>
 			</div>
 
-			<form class="contact100-form validate-form" method="POST">
+			<form class="contact100-form validate-form" action="#" method="POST">
 				<div class="wrap-input100 validate-input" data-validate="Campo Obrigatório">
 					<span class="label-input100">Nome Completo:</span>
-					<input class="input100" type="text" name="name" placeholder="Seu nome completo">
+					<input class="input100" type="text" name="name" maxlength="50" placeholder="Seu nome completo">
 					<span class="focus-input100"></span>
 				</div>
 
 				<div class="wrap-input100 validate-input" data-validate = "Campo Obrigatório">
 					<span class="label-input100">Usuario:</span>
-					<input class="input100" type="text" name="usuario" placeholder="Seu usuario">
+					<input class="input100" type="text" name="usuario" maxlength="20" placeholder="Seu Usuario">
 					<span class="focus-input100"></span>
 				</div>
 
 				<div class="wrap-input100 validate-input" data-validate = "Insira um Email válido: ex@abc.com">
 					<span class="label-input100">Email:</span>
-					<input class="input100" type="email" name="email" placeholder="Seu endereço de Email">
+					<input class="input100" type="email" name="email" maxlength="60" placeholder="Seu endereço de Email">
 					<span class="focus-input100"></span>
 				</div>
 
 				<div class="wrap-input100 validate-input" data-validate="Campo Obrigatório">
 					<span class="label-input100">Senha:</span>
-					<input class="input100" type="password" name="password" placeholder="Sua senha">
+					<input class="input100" type="password" name="password" maxlength="15" placeholder="Sua Senha">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate="Campo Obrigatório">
+					<span class="label-input100">Função:</span>
+					<input class="input100" type="txt" name="funcao" maxlength="50" placeholder="Seu Cargo">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate="Campo Obrigatório">
+					<span class="label-input100">Setor:</span>
+					<input class="input100" type="text" name="setor" maxlength="50" placeholder="Seu Setor">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate="Campo Obrigatório">
+					<span class="label-input100">Turno:</span>
+					<input class="input100" type="text" name="turno" maxlength="5" placeholder="Seu Turno">
 					<span class="focus-input100"></span>
 				</div>
 
 				<div class="wrap-input100 validate-input" data-validate="Campo Obrigatório">
 					<span class="label-input100">Matrícula:</span>
-					<input class="input100" type="text" name="matricula" placeholder="Sua matrícula">
+					<input class="input100" type="text" name="matricula"  maxlength="6" placeholder="Sua Matrícula">
 					<span class="focus-input100"></span>
 				</div>
 
 				<div class="wrap-input100 validate-input" data-validate="Campo Obrigatório">
 					<span class="label-input100">Ramal:</span>
-					<input class="input100" type="tel" name="ramal" placeholder="Seu Ramal da empresa">
+					<input class="input100" type="texxt" onkeyup="somenteNumeros(this);"  maxlength="6" name="ramal" placeholder="Seu Ramal">
 					<span class="focus-input100"></span>
 				</div>
 
@@ -97,7 +125,7 @@
 							Limpar
 						</span>	
 					</button>
-			</div>
+				</div>
 			</form>
 		</div>
 	</div>
@@ -108,6 +136,7 @@
 
 <!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+
 <!--===============================================================================================-->
 	<script src="vendor/animsition/js/animsition.min.js"></script>
 <!--===============================================================================================-->

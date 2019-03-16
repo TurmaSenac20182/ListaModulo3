@@ -1,3 +1,7 @@
+<?php
+  SESSION_start();
+?>
+
 <!doctype html>
 <html lang="pt-br">
     <head>
