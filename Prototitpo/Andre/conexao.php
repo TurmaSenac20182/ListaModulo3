@@ -6,3 +6,4 @@ function conexao() {
 
     return $link;
 }
+
