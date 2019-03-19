@@ -247,12 +247,12 @@ th, td {
 }
 
 .table100.ver2 .row100:hover td {
-  background-color: #5555ff;
+  background-color: #00aa00;
   color: #fff;
 }
 
 .table100.ver2 .hov-column-ver2 {
-  background-color: #5555ff;
+  background-color: #00aa00;
   color: #fff;
 }
 
@@ -261,7 +261,7 @@ th, td {
 }
 
 .table100.ver2 .row100 td:hover {
-  background-color: #7171ff;
+  background-color: #4aff4a;
   color: #fff;
 }
 
