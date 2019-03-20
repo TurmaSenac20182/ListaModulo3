@@ -26,7 +26,7 @@
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<a class="navbar-brand btn btn-outline-secondary" href="#"></i> Home</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-		 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 
@@ -39,7 +39,8 @@
 					<a class="nav-link" href="#">Link</a>
 				</li>-->
 			</ul>
-			<a class="btn btn-secondary" href="index.html" role="button" style="margin-left: 2%;z-index:999;"> Logout </a>
+			<a class="btn btn-secondary" href="index.html" role="button" style="margin-left: 2%;z-index:999;"> Logout
+			</a>
 			<!--<button type="button" class="btn btn-success my-2 my-sm-0" data-toggle="modal" data-target="#modalExemplo" style="margin-left: 1%;z-index:999;">Cadastrar-se</button>-->
 
 		</div>
@@ -52,22 +53,30 @@
 					<div class="panel panel-primary filterable">
 						<div class="panel-heading">
 							<div class="pull-right">
-								<button class="btn btn-default btn-xs btn-filter">Filter</button>
+								<button class="btn-filter login100-form-btn">Filtrar</button>
 							</div>
 						</div>
 
+
 						<table data-vertable="ver2">
 							<thead>
-								<tr class="filters">					
-									<th class="column100 column1" data-column="column1">&nbsp;</th>
-									<th><input type="text" class="form-control " placeholder="Nome" disabled></th>
-									<th class="column100 column1" data-column="column1">&nbsp;</th>
-									<th><input type="text" class="form-control" placeholder="Setor" disabled></th>
-									<th class="column100 column1" data-column="column1">&nbsp;</th>
-									<th><input type="text" class="form-control" placeholder="Ramal" disabled></th>
-									<th class="column100 column1" data-column="column1">&nbsp;</th>
-								</tr>
+								<form class="login100-form validate-form " action="#" method="POST">
+									<tr class="filters">
+										<th class="column100 column1" data-column="column1">&nbsp;</th>
+										<th><input type="text" class=" input100" placeholder="NOME" disabled></th>
+										<th><button class="btn login200-form-btn" type="submit"
+												data-column="column2">Consultar</button></th>
+										<th><input type="text" class=" input100" placeholder="SETOR" disabled></th>
+										<th><button class="btn login200-form-btn" type="submit"
+												data-column="column3">Consultar</button></th>
+										<th><input type="text" class=" input100" placeholder="RAMAL" disabled></th>
+										<th><button class="btn login200-form-btn" type="submit"
+												data-column="column4">Consultar</button></th>
+									</tr>
+								</form>
 							</thead>
+
+
 							<tbody>
 								<tr class="row100 head">
 									<th class="column100 column2" data-column="column2">Matricula</th>
