@@ -38,7 +38,7 @@
     align-items: center;
     padding: 0 20px;
     margin-bottom: 5%;
-    min-width: 150px;
+    min-width: 135px;
     height: 40px;
     background-color: #57b846;
     border-radius: 25px;
@@ -76,7 +76,43 @@
     color: #fff;
     
   }
-
+  
+  .btn-outline-info{
+		display: block;
+		height: auto;
+		justify-content: center;
+		align-items: center;
+		font-family: Poppins-Regular;
+		font-size: 19px; 
+	  
+	  
+	  
+  }
+  .btn-outline-success{
+		display: block;
+		height: auto;
+		justify-content: center;
+		align-items: center;
+		font-family: Poppins-Regular;
+		font-size: 18px;
+  }
+  
+  .btn-outline-danger{
+		display: block;
+		height: auto;
+		justify-content: center;
+		align-items: center;
+		font-family: Poppins-Regular;
+		font-size: 17px;
+		color:white;
+		border-color: #5555ff;
+  }
+  
+  .btn-outline-danger:hover{
+	background-color:#5555ff;
+	border-color: #5555ff;
+  }
+  
   .login200-form-btn:hover {
     background-color: #333333;
   }
