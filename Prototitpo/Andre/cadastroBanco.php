@@ -4,7 +4,7 @@ require 'funcoes.php';
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
   $nome = $_POST['name'];
-  $usuario = $_POST['usuario'];
+  $login = $_POST['usuario'];
   $email = $_POST['email'];
   $senha = $_POST['password'];
   $matricula = $_POST['matricula'];
@@ -13,9 +13,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
   $funcao = $_POST['funcao'];
   $turno = $_POST['turno'];
 
-  if(insert($nome, $usuario, $email, $senha, $matricula, $ramal, $setor, $funcao, $turno)){
+  if(insert($matricula,$login,$senha,$nome,$email,$ramal,$setor,$funcao,$turno)){
     echo 'Cadastro realizado com sucesso!';
   }
 
   //header('location: #');
 }
+

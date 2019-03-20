@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<title>Resultado Consulta</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/table.css">
+	<link rel="stylesheet" type="text/css" href="css/table_ultil.css">
+	<link rel="stylesheet" type="text/css" href="css/filter.css">
+	<!--===============================================================================================-->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand btn btn-outline-secondary" href="#"></i> Home</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+		 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="cadastro.html">Perfil</a>
+				</li>
+				<!--<li class="nav-item">
+					<a class="nav-link" href="#">Link</a>
+				</li>-->
+			</ul>
+			<a class="btn btn-secondary" href="index.html" role="button" style="margin-left: 2%;z-index:999;"> Logout </a>
+			<!--<button type="button" class="btn btn-success my-2 my-sm-0" data-toggle="modal" data-target="#modalExemplo" style="margin-left: 1%;z-index:999;">Cadastrar-se</button>-->
+
+		</div>
+	</nav>
+
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<!--<div class="container" style="width: 100%;">
+					<div class="btn-group" role="group" aria-label="Basic example">
+						<div id="C1">
+							<p style="margin-top: 5%;">
+								<button class="btn btn-success" type="button" data-toggle="collapse" data-target="#Iconsulta1" aria-expanded="false"
+								 aria-controls="collapseExample">
+									consulta por nome
+								</button>
+							</p>
+						</div>
+						<div id="C2" style="margin-left: 2%; margin-right: 2%;">
+							<p style="margin-top: 5%;">
+								<button class="btn btn-success" type="button" data-toggle="collapse" data-target="#Iconsulta2" aria-expanded="false"
+								 aria-controls="collapseExample">
+									consulta por ramal
+								</button>
+							</p>
+						</div>
+						<div id="C3">
+							<p style="margin-top: 5%;">
+								<button class="btn btn-success" type="button" data-toggle="collapse" data-target="#Iconsulta3" aria-expanded="false"
+								 aria-controls="collapseExample">
+									consulta por setor
+								</button>
+							</p>
+						</div>
+					</div>
+					<div class="consulta1">
+						<div class="collapse" id="Iconsulta1">
+							<div class="card card-body">
+								<form action="consultaNome.php" method="post">
+									<div class="form-group">
+										<label for="Inome">Nome</label>
+										<input type="text" class="form-control" id="Inome" name="Nnome" placeholder="Consulte o nome aqui">
+									</div>
+									<button type="submit" class="btn btn-success">Consultar</button>
+								</form>
+							</div>
+						</div>
+					</div>
+
+					<div class="consulta2">
+						<div class="collapse" id="Iconsulta2">
+							<div class="card card-body">
+								<form action="#" method="post">
+									<div class="form-group">
+										<label for="Iramal">Ramal</label>
+										<input type="text" class="form-control" id="Iramal" name="Nramal" placeholder="Consulte o ramal aqui">
+									</div>
+									<button type="submit" class="btn btn-success">Consultar</button>
+								</form>
+							</div>
+						</div>
+					</div>
+
+					<div class="consulta3">
+
+						<div class="collapse" id="Iconsulta3">
+							<div class="card card-body">
+								<form action="#" method="post">
+									<select name="Nsetor" style="border: 1px solid #D3D3D3; border-radius: 30px; width: 100%; margin-bottom: 2%; height: 50%;">
+										<option value="1">&nbsp;&nbsp;1</option>
+										<option value="2">&nbsp;&nbsp;2</option>
+										<option value="3">&nbsp;&nbsp;3</option>
+										<option value="4">&nbsp;&nbsp;4</option>
+									</select>
+									<button type="submit" class="btn btn-success">Consultar</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<br>-->
+
+				<div class="table100 ver2 m-b-110">	
+					<div class="panel panel-primary filterable">
+					<div class="panel-heading">
+					<h4 class="panel-title">Consulta</h4>
+					<div class="pull-right">
+						<button class="btn btn-default btn-xs btn-filter">Filter</button>
+					</div>
+					</div>
+					<table data-vertable="ver2" class="table">
+							<thead>
+								<tr class="filters row100">
+									<th><input type="text" class="form-control " placeholder="Nome" disabled></th>
+									<th><input type="text" class="form-control" placeholder="Setor" disabled></th>
+									<th><input type="text" class="form-control" placeholder="Ramal" disabled></th>
+								</tr>
+							</thead>
+								<thead>
+									<tr class="row100 head">
+										<th class="column100 column1" data-column="column1">ID</th>
+										<th class="column100 column2" data-column="column2">Matricula</th>
+										<th class="column100 column3" data-column="column3">Nome</th>
+										<th class="column100 column4" data-column="column4">Email</th>
+										<th class="column100 column5" data-column="column5">Funçao</th>
+										<th class="column100 column6" data-column="column6">Setor</th>
+										<th class="column100 column7" data-column="column7">Cargo</th>
+										<th class="column100 column8" data-column="column8">Ramal</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="row100">
+										<td class="column100 column1" data-column="column1">1</td>
+										<td class="column100 column2" data-column="column2">999999</td>
+										<td class="column100 column3" data-column="column3">Irineu1</td>
+										<td class="column100 column4" data-column="column4">Ex@email.com</td>
+										<td class="column100 column5" data-column="column5">TI</td>
+										<td class="column100 column6" data-column="column6">Desenvolvimento</td>
+										<td class="column100 column7" data-column="column7">Estagiário de TI</td>
+										<td class="column100 column8" data-column="column8">9999</td>
+									</tr>
+		
+									<tr class="row100">
+										<td class="column100 column1" data-column="column1">2</td>
+										<td class="column100 column2" data-column="column2">999999</td>
+										<td class="column100 column3" data-column="column3">Irineu2</td>
+										<td class="column100 column4" data-column="column4">Ex@email.com</td>
+										<td class="column100 column5" data-column="column5">Redes</td>
+										<td class="column100 column6" data-column="column6">Administração</td>
+										<td class="column100 column7" data-column="column7">Estagiário de Redes</td>
+										<td class="column100 column8" data-column="column8">9999</td>
+									</tr>
+								</tbody>
+					
+					</table>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+	<!--===============================================================================================-->
+	<script src="js/filter.js"></script>
+
+</body>
+
+</html>
+

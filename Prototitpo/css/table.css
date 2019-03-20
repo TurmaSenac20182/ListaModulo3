@@ -247,12 +247,12 @@ th, td {
 }
 
 .table100.ver2 .row100:hover td {
-  background-color: #5555ff;
+  background-color: #00aa00;
   color: #fff;
 }
 
 .table100.ver2 .hov-column-ver2 {
-  background-color: #5555ff;
+  background-color: #00aa00;
   color: #fff;
 }
 
@@ -261,7 +261,7 @@ th, td {
 }
 
 .table100.ver2 .row100 td:hover {
-  background-color: #7171ff;
+  background-color: #4aff4a;
   color: #fff;
 }
 
@@ -450,4 +450,27 @@ th, td {
 
 .table100.ver6 .row100 td:hover {
   background-color: rgba(255,255,255,0.2);
+}
+
+/*Filter*/
+.filterable .panel-heading .pull-right {
+  margin-top: -30px;
+}
+
+.filterable .filters input[disabled] {
+  background-color: transparent;
+  border: none;
+  cursor: auto;
+  box-shadow: none;
+  padding: 0;
+  height: auto;
+}
+.filterable .filters input[disabled]::-webkit-input-placeholder {
+  color: #333;
+}
+.filterable .filters input[disabled]::-moz-placeholder {
+  color: #333;
+}
+.filterable .filters input[disabled]:-ms-input-placeholder {
+  color: #333;
 }
