@@ -39,13 +39,13 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
-					<a class="nav-link btn btn-outline-success" role="button" href="cadastro.html"><i class="fas fa-user-circle"></i> Perfil</a>
+					<a class="nav-link btn btn-outline-success" role="button" href="cadastro.php"><i class="fas fa-user-circle"></i> Perfil</a>
 				</li>
 				<!--<li class="nav-item">
 					<a class="nav-link" href="#">Link</a>
 				</li>-->
 			</ul>
-			<a class="btn btn-outline-danger" href="index.html" role="button"> Logout <i class="fas fa-sign-out-alt"></i>	</a>
+			<a class="btn btn-outline-danger" href="index.php" role="button"> Logout <i class="fas fa-sign-out-alt"></i>	</a>
 			<!--<button type="button" class="btn btn-success my-2 my-sm-0" data-toggle="modal" data-target="#modalExemplo" style="margin-left: 1%;z-index:999;">Cadastrar-se</button>-->
 
 		</div>

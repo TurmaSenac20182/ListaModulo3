@@ -68,7 +68,7 @@
           </span>
         </div>
 
-        <form class="login100-form validate-form" action="consultaLogin.html" method="POST">
+        <form class="login100-form validate-form" action="consultaLogin.php" method="POST">
           <div class="wrap-input100 validate-input m-b-26" data-validate="Campo Obrigatório">
             <span class="label-input100">Usuário</span>
             <input class="input100" type="text" name="usuario" placeholder="Insira seu usuário.">
@@ -101,7 +101,7 @@
             <button class="login100-form-btn">
               Login
             </button>
-            <a class="login100-form-btn2" href="cadastro.html" role="button" style="margin-left: 2%;z-index:999;">
+            <a class="login100-form-btn2" href="cadastro.php" role="button" style="margin-left: 2%;z-index:999;">
               Cadastrar </a>
           </div>
         </form>
