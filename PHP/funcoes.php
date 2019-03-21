@@ -32,3 +32,19 @@ function insert($matricula,$login,$senha,$nome,$email,$ramal,$setor,$funcao,$tur
   }
   return $dados;
 }
+
+function consutaRamal($ramal)
+ {
+  $link = conexao();
+  $query = "select * from funcionario where ramal like '%{$ramal}%'";
+  $result = mysqli_query($link, $query);
+  $dados = array();
+  
+  while($registro = mysqli_fetch_assoc($result)) {
+    array_push($dados, $registro);
+  }
+  if(!$link) {
+    mysqli_close($link);
+  }
+  return $dados;
+}

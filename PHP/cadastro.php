@@ -100,10 +100,10 @@
 					<span class="label-input100">Função:</span>
 					<select class="input300">
 						<option selected>Selecione</option>
-						<option value="manha">Gerente</option>
-						<option value="tarde">Analista</option>
-						<option value="noite">Técnico</option>	
-						<option value="noite">Auxiliar</option>				
+						<option value="1">Gerente</option>
+						<option value="2">Analista</option>
+						<option value="3">Técnico</option>	
+						<option value="4">Auxiliar</option>				
 					</select>
 				</div>
 
@@ -111,17 +111,11 @@
 					<span class="label-input100">Turno:</span>
 					<select class="input300">
 						<option selected>Selecione</option>
-						<option value="manha">Manhã</option>
-						<option value="tarde">Tarde</option>
-						<option value="noite">Noite</option>				
+						<option value="1">Manhã</option>
+						<option value="2">Tarde</option>
+						<option value="3">Noite</option>				
 					</select>
 				</div>
-
-				<!--<div class="wrap-input100 validate-input" data-validate="Campo Obrigatório">
-					<span class="label-input100">Turno:</span>
-					<input class="input100" type="text" name="turno" maxlength="5" placeholder="Seu Turno">
-					<span class="focus-input100"></span>
-				</div>-->
 
 				<div class="wrap-input100 validate-input" data-validate="Campo Obrigatório">
 					<span class="label-input100">Matrícula:</span>
