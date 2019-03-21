@@ -1,6 +1,6 @@
 <?php
 include "funcoes.php";
-if($_SERVER['REQUEST_METHOD'] === 'GET') 
+if($_SERVER['REQUEST_METHOD'] === 'POST') 
 {
     $dados = consutaNome($_GET['Nome']) ;
 }
@@ -29,8 +29,7 @@ if($_SERVER['REQUEST_METHOD'] === 'GET')
 </head>
 <body>
     
-<?php foreach ($dados as $linha) { ?>
-
+<?php foreach ($dados as $lista) { ?> 
 	<div class="limiter">
 		<div class="container-table100">
 			<div class="wrap-table100">				

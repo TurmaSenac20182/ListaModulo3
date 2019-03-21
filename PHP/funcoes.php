@@ -23,6 +23,7 @@ function insert($matricula,$login,$senha,$nome,$email,$ramal,$setor,$funcao,$tur
   $query = "select * from VW_CONSULTA_GERAL where nome like '%{$nome}%'";
   $result = mysqli_query($link, $query);
   $dados = array();
+  
   while($registro = mysqli_fetch_assoc($result)) {
     array_push($dados, $registro);
   }
