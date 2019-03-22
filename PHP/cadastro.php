@@ -90,6 +90,13 @@
 					<span class="focus-input100"></span>
 				</div>
 
+
+				<div class="wrap-input100 validate-input" data-validate="Campo Obrigatório">
+					<span class="label-input100">Função:</span>
+					<input class="input100" type="txt" name="funcao" maxlength="50" placeholder="Seu Cargo">
+					<span class="focus-input100"></span>
+				</div>
+
 				<div class="wrap-input100 validate-input" data-validate="Campo Obrigatório">
 					<span class="label-input100">Setor:</span>
 					<input class="input100" type="text" name="setor" maxlength="50" placeholder="Seu Setor">
@@ -97,24 +104,9 @@
 				</div>
 
 				<div class="wrap-input100 validate-input" data-validate="Campo Obrigatório">
-					<span class="label-input100">Função:</span>
-					<select class="input300">
-						<option selected>Selecione</option>
-						<option value="1">Gerente</option>
-						<option value="2">Analista</option>
-						<option value="3">Técnico</option>	
-						<option value="4">Auxiliar</option>				
-					</select>
-				</div>
-
-				<div class="wrap-input100 validate-input" data-validate="Campo Obrigatório">
 					<span class="label-input100">Turno:</span>
-					<select class="input300">
-						<option selected>Selecione</option>
-						<option value="1">Manhã</option>
-						<option value="2">Tarde</option>
-						<option value="3">Noite</option>				
-					</select>
+					<input class="input100" type="text" name="turno" maxlength="5" placeholder="Seu Turno">
+					<span class="focus-input100"></span>
 				</div>
 
 				<div class="wrap-input100 validate-input" data-validate="Campo Obrigatório">

@@ -29,3 +29,5 @@ insert into funcionario(matricula,login,senha,nome,email,ramal,FK_setor,FK_funca
   ("753654","teste5","123789","Eduardo teste5","teste5@teste.com","856",5,4,3);
   
 select*from funcionario;
+
+select * from VW_CONSULTA_GERAL where nome="teste2" and senha="987654"
