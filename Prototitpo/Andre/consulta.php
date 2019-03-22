@@ -44,7 +44,7 @@
             <div class="consulta1">
                 <div class="collapse" id="Iconsulta1">
                     <div class="card card-body">
-                        <form action="consultaNome.php" method="post">
+                        <form action="/PHP/consultaNome.php" method="post">
                             <div class="form-group">
                                 <label for="Inome">Nome</label>
                                 <input type="text" class="form-control" id="Inome" name="Nnome" placeholder="Consulte o nome aqui">
