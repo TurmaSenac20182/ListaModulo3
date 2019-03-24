@@ -2,7 +2,7 @@
 include "funcoes.php";
 if($_SERVER['REQUEST_METHOD'] === 'GET') 
 {
-    $dados = consutaRamal($_GET['ramal']) ;
+    $dados = consutaSetor($_GET['Setor']) ;
 }
 ?>
 

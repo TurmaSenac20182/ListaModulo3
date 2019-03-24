@@ -16,6 +16,20 @@ function insert($matricula,$login,$senha,$nome,$email,$ramal,$setor,$funcao,$tur
    mysqli_close($link);
   
  }
+ function ConsultaGeral()
+ {
+  $link = conexao();
+  $query = "select * from VW_CONSULTA_GERAL";
+  $result = mysqli_query($link, $query);
+  $registroGeral = array();
+  while($registro = mysqli_fetch_assoc($result)) {
+    array_push($registroGeral, $registro);
+  }
+  if(!$link) {
+    mysqli_close($link);
+  }
+  return $registroGeral;
+}
 
  function consutaNome($nome)
  {
@@ -51,7 +65,7 @@ function insert($matricula,$login,$senha,$nome,$email,$ramal,$setor,$funcao,$tur
 function consutaSetor($Setor)
 {
  $link = conexao();
- $query = "select * from VW_CONSULTA_GERAL where  Setor '%{$Setor}%'";
+ $query = "select * from VW_CONSULTA_GERAL where  descricao '%{$Setor}%'";
  $result = mysqli_query($link, $query);
  $dados = array();
  while($registro = mysqli_fetch_assoc($result)) {

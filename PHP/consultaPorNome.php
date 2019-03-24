@@ -1,8 +1,8 @@
 <?php
 include "funcoes.php";
-if($_SERVER['REQUEST_METHOD'] === 'POST') 
+if($_SERVER['REQUEST_METHOD'] === 'GET') 
 {
-    $dados = consutaNome($_GET['Nome']) ;
+    $dados = consutaNome($_GET['nome']) ;
 }
 ?>
 
