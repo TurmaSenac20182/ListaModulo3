@@ -105,6 +105,7 @@
 						<option value="3">Técnico</option>	
 						<option value="4">Auxiliar</option>				
 					</select>
+					<span class="focus-input300"></span>
 				</div>
 
 				<div class="wrap-input100 validate-input" data-validate="Campo Obrigatório">
