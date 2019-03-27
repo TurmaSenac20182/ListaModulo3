@@ -15,9 +15,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   if(insert($matricula,$login,$senha,$nome,$email,$ramal,$setor,$funcao,$turno)){
     echo 'Cadastro realizado com sucesso!';
-    die;
   }
 
- // header('location: index.php');
+  //header('location: #');
 }
 

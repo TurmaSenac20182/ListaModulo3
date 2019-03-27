@@ -1,5 +1,9 @@
 <?php
+ session_start();
+ $login=$_SESSION['login'];
+ print $login;
 
+ 
 require 'conexao.php';
 
 function insert($matricula,$login,$senha,$nome,$email,$ramal,$setor,$funcao,$turno)
@@ -76,3 +80,21 @@ function consutaSetor($Setor)
  }
  return $dados;
 }
+
+
+  function Listarlogin($login)
+  {
+   $link = conexao();
+   $query = "select * from funcionario where login='{$login}'";   
+   $result = mysqli_query($link, $query);  
+   $dados = array();
+   while($registro = mysqli_fetch_assoc($result)) 
+   {
+	 array_push($dados, $registro);
+   }
+   if(!$link) {
+	 mysqli_close($link);
+   }
+   return $dados;
+   
+  }

@@ -64,7 +64,7 @@
 				</span>
 			</div>
 
-			<form action="cadastroBanco.php" class="contact100-form validate-form" method="POST">
+			<form action="consultaLogin.php" class="contact100-form validate-form" method="POST">
 				<div class="wrap-input100 validate-input" data-validate="Campo Obrigatório">
 					<span class="label-input100">Nome Completo:</span>
 					<input class="input100" type="text" name="name" maxlength="50" placeholder="Seu nome completo">
@@ -92,19 +92,13 @@
 
 				<div class="wrap-input100 validate-input" data-validate="Campo Obrigatório">
 					<span class="label-input100">Setor:</span>
-					<select name="setor" class="input300">
-						<option selected>Selecione</option>
-						<option value="1">Administração</option>
-						<option value="2">Contabilidade</option>
-						<option value="3">RH</option>	
-						<option value="4">Tecnologia</option>				
-					</select>
-					<span class="focus-input300"></span>
+					<input class="input100" type="text" name="setor" maxlength="50" placeholder="Seu Setor">
+					<span class="focus-input100"></span>
 				</div>
 
 				<div class="wrap-input100 validate-input" data-validate="Campo Obrigatório">
 					<span class="label-input100">Função:</span>
-					<select name="funcao" class="input300">
+					<select class="input300">
 						<option selected>Selecione</option>
 						<option value="1">Gerente</option>
 						<option value="2">Analista</option>
@@ -116,7 +110,7 @@
 
 				<div class="wrap-input100 validate-input" data-validate="Campo Obrigatório">
 					<span class="label-input100">Turno:</span>
-					<select name="turno" class="input300">
+					<select class="input300">
 						<option selected>Selecione</option>
 						<option value="1">Manhã</option>
 						<option value="2">Tarde</option>
