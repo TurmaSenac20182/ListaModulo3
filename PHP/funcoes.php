@@ -1,9 +1,5 @@
 <?php
- session_start();
- /*'Comentado devido um erro em PaginaConsulta.'  $login = $_SESSION['login'];
- print $login;*/
 
- 
 require 'conexao.php';
 
 function insert($matricula,$login,$senha,$nome,$email,$ramal,$setor,$funcao,$turno)
@@ -20,6 +16,7 @@ function insert($matricula,$login,$senha,$nome,$email,$ramal,$setor,$funcao,$tur
    mysqli_close($link);
   
  }
+
  function ConsultaGeral()
  {
   $link = conexao();
@@ -82,19 +79,19 @@ function consutaSetor($Setor)
 }
 
 
-  function Listarlogin($login)
-  {
+function atualizar($login,$senha,$nome,$email,$ramal,$setor,$funcao,$turno)
+{
    $link = conexao();
-   $query = "select * from funcionario where login='{$login}'";   
-   $result = mysqli_query($link, $query);  
-   $dados = array();
-   while($registro = mysqli_fetch_assoc($result)) 
-   {
-	 array_push($dados, $registro);
-   }
-   if(!$link) {
-	 mysqli_close($link);
-   }
-   return $dados;
+   $query ="update  funcionario set 
+   login='{$login}',senha=md5('{$senha}'),nome='{$nome}',email='{$email}',
+   ramal='{$ramal}', FK_setor={$setor}, FK_funcao={$funcao},FK_turno={$turno}";
    
-  }
+   if(mysqli_query($link, $query))
+   {
+     return true;
+   }
+   
+   mysqli_close($link);
+  
+ }
+

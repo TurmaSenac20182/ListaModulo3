@@ -1,8 +1,27 @@
 <!DOCTYPE html>
 <?php 
-require "funcoes.php";
- $dados=Listarlogin();
+
+require "conexao.php";
+
+session_Start();
+$usuario=$_SESSION['login'];
+$query= "select * from funcionario where login='{$usuario}'";
+$result=mysqli_query(conexao(),$query);
+$dados=mysqli_fetch_assoc($result); 
+
+$Nome=($dados['nome']);
+$login=($dados['login']);
+$Senha=($dados['senha']);
+$Email=($dados['email']);
+$Função=($dados['FK_funcao']);
+$Setor=($dados['FK_setor']);
+$Turno=($dados['FK_turno']);
+$Matrícula=($dados['matricula']);
+$Ramal=($dados['ramal']);
+
 ?>
+
+
 
 <html lang="pt-br">
 <head>
@@ -46,7 +65,7 @@ require "funcoes.php";
 	</script>
 </head>
 <body>
-
+   
 	<form action="cadastroBanco.php" method="POST">
 	<div class="container-contact100">
 		<div class="contact100-map" id="google_map" data-map-x="40.722047" data-map-y="-73.986422" data-pin="images/icons/map-marker.png" data-scrollwhell="0" data-draggable="1"></div>
@@ -63,76 +82,72 @@ require "funcoes.php";
 			</div>
 			
 			<form action="PaginaConsulta.html" class="contact100-form validate-form" method="POST">
-			  <?php foreach ($dados as $lista) { ?> 
+			  
 			 	<div class="wrap-input100 validate-input" data-validate="Campo Obrigatório">
 					<span class="label-input100">Nome Completo:</span>
-					<?= $lista['nome'] ?>
+					<input class="input100" type="text" name="usuario" maxlength="20" value="<?php echo $Nome;?>">
+					<span class="focus-input100"></span>
 				</div>
 
 				<div class="wrap-input100 validate-input" data-validate = "Campo Obrigatório">
 					<span class="label-input100">Usuario:</span>
-					<input class="input100" type="text" name="usuario" maxlength="20" placeholder="Seu Usuario">
+					<input class="input100" type="text" name="usuario" maxlength="20" value="<?php echo $login;?>">
 					<span class="focus-input100"></span>
 				</div>
 
 				<div class="wrap-input100 validate-input" data-validate="Campo Obrigatório">
 					<span class="label-input100">Senha:</span>
-					<input class="input100" type="password" name="password" maxlength="15" placeholder="Sua Senha">
+					<input class="input100" type="password" name="password" maxlength="15" value="<?php echo $senha;?>">
 					<span class="focus-input100"></span>
 				</div>
 
 				<div class="wrap-input100 validate-input" data-validate = "Insira um Email válido: ex@abc.com">
 					<span class="label-input100">Email:</span>
-					<input class="input100" type="email" name="email" maxlength="60" placeholder="Seu endereço de Email">
+					<input class="input100" type="email" name="email" maxlength="60" value="<?php echo $Email;?>">
 					<span class="focus-input100"></span>
 				</div>
 			
 
 				<div class="wrap-input100 validate-input" data-validate="Campo Obrigatório">
 					<span class="label-input100">Função:</span>
-					<input class="input100" type="txt" name="funcao" maxlength="50" placeholder="Seu Cargo">
+					<input class="input100" type="txt" name="funcao" maxlength="50" value="<?php echo $Função;?>">
 					<span class="focus-input100"></span>
 				</div>
 
 				<div class="wrap-input100 validate-input" data-validate="Campo Obrigatório">
 					<span class="label-input100">Setor:</span>
-					<input class="input100" type="text" name="setor" maxlength="50" placeholder="Seu Setor">
+					<input class="input100" type="text" name="setor" maxlength="50" value="<?php echo $Setor;?>">
 					<span class="focus-input100"></span>
 				</div>
 
 				<div class="wrap-input100 validate-input" data-validate="Campo Obrigatório">
 					<span class="label-input100">Turno:</span>
-					<input class="input100" type="text" name="turno" maxlength="5" placeholder="Seu Turno">
+					<input class="input100" type="text" name="turno" maxlength="5" value="<?php echo $Turno;?>">
 					<span class="focus-input100"></span>
 				</div>
 
 				<div class="wrap-input100 validate-input" data-validate="Campo Obrigatório">
 					<span class="label-input100">Matrícula:</span>
-					<input class="input100" type="text" name="matricula"  maxlength="6" placeholder="Sua Matrícula">
+					<input class="input100" type="text" name="matricula"  maxlength="6" value="<?php echo $Matrícula;?>">
 					<span class="focus-input100"></span>
 				</div>
 
 				<div class="wrap-input100 validate-input" data-validate="Campo Obrigatório">
 					<span class="label-input100">Ramal:</span>
-					<input class="input100" type="text" onkeyup="somenteNumeros(this);"  maxlength="3" name="ramal" placeholder="Seu Ramal">
+					<input class="input100" type="text" onkeyup="somenteNumeros(this);"  maxlength="3" name="ramal" value="<?php echo $Ramal;?>">
 					<span class="focus-input100"></span>
 				</div>
-
-				<?php
-    }
-    ?>
-
 				<div class="container-contact100-form-btn">
 					<button class="contact100-form-btn" style="margin-right: 2%;z-index:999;">
 						<span>
-							Cadastrar-se
+							Alterar
 							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
 						</span>	
 					</button>
 
 					<button class="contact100-form-btn2" type="reset" style="margin-left: 1%;z-index:999;">
 						<span>
-							Limpar
+							Cancelar
 						</span>	
 					</button>
 				</div>
