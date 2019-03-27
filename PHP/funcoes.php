@@ -1,7 +1,7 @@
 <?php
  session_start();
- $login=$_SESSION['login'];
- print $login;
+ /*'Comentado devido um erro em PaginaConsulta.'  $login = $_SESSION['login'];
+ print $login;*/
 
  
 require 'conexao.php';
