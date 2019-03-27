@@ -20,8 +20,8 @@ $row=mysqli_num_rows($result);
 
 if($row>0)
 {
-  $_SESSION['login']=$usuario;
-   header('location:consultaPorNome.php');
+  $_SESSION['login'] = $usuario;
+   header('location:PaginaConsulta.php');
    exit();
 }
 else
