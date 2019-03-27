@@ -274,7 +274,18 @@ iframe {
   width: 80px;
 
 }
-
+/*IMPUT 300 Select*/
+.input300 {
+  font-family: Poppins-Regular;
+  font-size: 15px;
+  color: #6b6b6b;
+  display: block;
+  width: 100%;
+  border:1px solid rgb(180, 176, 176);
+  border-radius: 3px;
+  background: transparent;
+  padding: 2px;
+}
 /*---------------------------------------------*/
 .input100 {
   font-family: Poppins-Regular;
@@ -452,7 +463,23 @@ textarea.input100 {
   transform: translateX(10px);
 }
 
+/*Button Lougout*/
 
+.btn-outline-danger{
+  display: block;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  font-family: Poppins-Regular;
+  font-size: 17px;
+  color:white;
+  border-color: #5555ff;
+}
+
+.btn-outline-danger:hover{
+background-color:#5555ff;
+border-color: #5555ff;
+}
 /*------------------------------------------------------------------
 [ Responsive ]*/
 
@@ -544,5 +571,4 @@ textarea.input100 {
     opacity: 1;
   }
 }
-
 
