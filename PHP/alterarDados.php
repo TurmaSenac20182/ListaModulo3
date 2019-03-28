@@ -3,7 +3,7 @@
 require 'funcoes.php';
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $nome = $_POST['name'];
+  $nome = $_POST['nome'];
   $login = $_POST['usuario'];
   $email = $_POST['email'];
   $senha = $_POST['password'];

@@ -83,7 +83,7 @@ function atualizar($matricula, $login, $senha, $nome, $email, $ramal, $setor, $f
    $link = conexao();
    $query ="update  funcionario set
    login = '{$login}',senha = ('{$senha}'), nome = '{$nome}', email = '{$email}',
-   ramal = '{$ramal}', FK_setor = {$setor}, FK_funcao = {$funcao}, FK_turno = {$turno}";
+   ramal = '{$ramal}', FK_setor = {$setor}, FK_funcao = {$funcao}, FK_turno = {$turno} where matricula  =  $matricula";
 
    mysqli_query($link, $query);
 
