@@ -73,15 +73,15 @@ $Ramal = ($dados['ramal']);
 		<div class="wrap-contact100">
 			<div class="contact100-form-title" style="background-image: url(imagens/bg-01.jpg);">
 				<span class="contact100-form-title-1">
-					Página de Cadastro
+					Seus dados pessoais
 				</span>
 
 				<span class="contact100-form-title-2">
-					Insira seus dados corretamente!
+					Atualize os dados incorretos
 				</span>
 			</div>
 			
-			<form action="PaginaConsulta.html" class="contact100-form validate-form" method="POST">
+			<form action="alterarDados.php" class="contact100-form validate-form" method="POST">
 			  
 			 	<div class="wrap-input100 validate-input" data-validate="Campo Obrigatório">
 					<span class="label-input100">Nome Completo:</span>

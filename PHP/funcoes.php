@@ -78,17 +78,16 @@ function consutaSetor($Setor)
 }
 
 
-function atualizar($login,$senha,$nome,$email,$ramal,$setor,$funcao,$turno)
+function atualizar($matricula, $login, $senha, $nome, $email, $ramal, $setor, $funcao, $turno)
 {
    $link = conexao();
    $query ="update  funcionario set
-   login='{$login}',senha=md5('{$senha}'),nome='{$nome}',email='{$email}',
-   ramal='{$ramal}', FK_setor={$setor}, FK_funcao={$funcao},FK_turno={$turno}";
+   login = '{$login}',senha = ('{$senha}'), nome = '{$nome}', email = '{$email}',
+   ramal = '{$ramal}', FK_setor = {$setor}, FK_funcao = {$funcao}, FK_turno = {$turno}";
 
-   if(mysqli_query($link, $query))
-   {
-     return true;
-   }
+   mysqli_query($link, $query);
+
+   return true;
 
    mysqli_close($link);
 
