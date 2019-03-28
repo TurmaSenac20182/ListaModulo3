@@ -1,8 +1,8 @@
 <?php
 include "funcoes.php";
-if($_SERVER['REQUEST_METHOD'] === 'GET') 
+if($_SERVER['REQUEST_METHOD'] === 'POST') 
 {
-    $dados = consutaRamal($_GET['ramal']) ;
+    $dados = consutaSetor($_GET['Setor']) ;
 }
 ?>
 
@@ -47,12 +47,12 @@ if($_SERVER['REQUEST_METHOD'] === 'GET')
 						</thead>
 						<tbody>
 							<tr class="row100">
-								<td class="column100 column1" data-column="column1"> <?= $lista['matricula'] ?> </td>
-								<td class="column100 column2" data-column="column2"> <?= $lista['nome'] ?> </td>
-								<td class="column100 column3" data-column="column3"> <?= $lista['email'] ?> </td>
-								<td class="column100 column4" data-column="column4"> <?= $lista['Função'] ?> </td>
-								<td class="column100 column5" data-column="column5"> <?= $lista['Setor'] ?> </td>
-								<td class="column100 column6" data-column="column6"> <?= $lista['ramal'] ?> </td>								
+								<td class="column100 column1" data-column="column1"> <?= $linha['matricula'] ?> </td>
+								<td class="column100 column2" data-column="column2"> <?= $linha['nome'] ?> </td>
+								<td class="column100 column3" data-column="column3"> <?= $linha['email'] ?> </td>
+								<td class="column100 column4" data-column="column4"> <?= $linha['Função'] ?> </td>
+								<td class="column100 column5" data-column="column5"> <?= $linha['Setor'] ?> </td>
+								<td class="column100 column6" data-column="column6"> <?= $linha['ramal'] ?> </td>								
                             </tr>
                             
 						</tbody>

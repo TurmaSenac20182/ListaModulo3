@@ -1,6 +1,10 @@
 <?php
-  SESSION_start();
+	SESSION_start();
+	include "funcoes.php";
+	$dados = ConsultaGeral();
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -39,7 +43,7 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
-					<a class="nav-link btn btn-outline-success" role="button" href="cadastro.php"><i class="fas fa-user-circle"></i> Perfil</a>
+					<a class="nav-link btn btn-outline-success" role="button" href="DadosPessoais.php"><i class="fas fa-user-circle"></i> Perfil</a>
 				</li>
 				<!--<li class="nav-item">
 					<a class="nav-link" href="#">Link</a>
@@ -62,58 +66,49 @@
 							</div>
 						</div>
 
-
 						<table data-vertable="ver2">
-							<thead>
-								<form class="login100-form validate-form " action="#" method="POST">
-									<tr class="filters">
-										<th class="column100 column1" data-column="column1">&nbsp;</th>
-										<th><input type="text" class=" input100" placeholder="NOME" disabled></th>
-										<th><button class="btn login200-form-btn" type="submit"
-												data-column="column2">Consultar</button></th>
-										<th><input type="text" class=" input100" placeholder="SETOR" disabled></th>
-										<th><button class="btn login200-form-btn" type="submit"
-												data-column="column3">Consultar</button></th>
-										<th><input type="text" class=" input100" placeholder="RAMAL" disabled></th>
-										<th><button class="btn login200-form-btn" type="submit"
-												data-column="column4">Consultar</button></th>
-									</tr>
+							<thead>						
+								<tr class="filters">
+								<form class="login100-form validate-form " action="consultaPorNome.php" method="GET">
+									<th><input type="text" class="input100" name="Nome" placeholder="NOME" disabled></th>
+									<th><button class="btn login200-form-btn" type="submit"
+											data-column="column2">Consultar</button></th>
 								</form>
+								<form class="login100-form validate-form " action="consultaPorSetor.php" method="GET">
+									<th><input type="text" class="input100" name="Setor" placeholder="SETOR" disabled></th>
+									<th><button class="btn login200-form-btn" type="submit"
+											data-column="column3">Consultar</button></th>
+								</form>
+								<form class="login100-form validate-form " action="consultaPorRamal.php" method="GET">
+									<th><input type="text" class="input100" name="ramal" placeholder="RAMAL" disabled></th>
+									<th><button class="btn login200-form-btn" type="submit"
+											data-column="column4">Consultar</button></th>
+								</form>
+								</tr>								
 							</thead>
 
-
+							
 							<tbody>
-								<tr class="row100 head">
-									<th class="column100 column2" data-column="column2">Matricula</th>
-									<th class="column100 column3" data-column="column3">Nome</th>
-									<th class="column100 column4" data-column="column4">Email</th>
-									<th class="column100 column5" data-column="column5">Funçao</th>
-									<th class="column100 column6" data-column="column6">Setor</th>
-									<th class="column100 column7" data-column="column7">Cargo</th>
-									<th class="column100 column8" data-column="column8">Ramal</th>
-								</tr>
-
-								<tr class="row100">
-									<td class="column100 column2" data-column="column2">999999</td>
-									<td class="column100 column3" data-column="column3">Irineu1</td>
-									<td class="column100 column4" data-column="column4">Ex@email.com</td>
-									<td class="column100 column5" data-column="column5">TI</td>
-									<td class="column100 column6" data-column="column6">Desenvolvimento</td>
-									<td class="column100 column7" data-column="column7">Estagiário de TI</td>
-									<td class="column100 column8" data-column="column8">9999</td>
-								</tr>
-
-								<tr class="row100">
-									<td class="column100 column2" data-column="column2">999999</td>
-									<td class="column100 column3" data-column="column3">Irineu2</td>
-									<td class="column100 column4" data-column="column4">Ex@email.com</td>
-									<td class="column100 column5" data-column="column5">Redes</td>
-									<td class="column100 column6" data-column="column6">Administração</td>
-									<td class="column100 column7" data-column="column7">Estagiário de Redes</td>
-									<td class="column100 column8" data-column="column8">9999</td>
-								</tr>
+							<tr class="row100 head">								
+								<th class="column100 column2" data-column="column2">Matricula</th>
+								<th class="column100 column3" data-column="column3">Nome</th>
+								<th class="column100 column4" data-column="column4">Email</th>
+								<th class="column100 column5" data-column="column5">Funçao</th>
+								<th class="column100 column6" data-column="column6">Setor</th>								
+								<th class="column100 column8" data-column="column8">Ramal</th>
+							</tr>
+							<?php foreach ($dados as $lista) { ?> 	
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1"> <?= $lista['matricula'] ?> </td>
+								<td class="column100 column2" data-column="column2"> <?= $lista['nome'] ?> </td>
+								<td class="column100 column3" data-column="column3"> <?= $lista['email'] ?> </td>
+								<td class="column100 column4" data-column="column4"> <?= $lista['Função'] ?> </td>
+								<td class="column100 column5" data-column="column5"> <?= $lista['Setor'] ?> </td>
+								<td class="column100 column6" data-column="column6"> <?= $lista['ramal'] ?> </td>								
+							</tr>
+							<?php } ?>
 							</tbody>
-						</table>
+						</table>						
 					</div>
 				</div>
 			</div>
@@ -139,5 +134,4 @@
 	<script src="js/filter.js"></script>
 
 </body>
-
 </html>

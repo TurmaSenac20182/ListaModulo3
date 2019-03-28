@@ -1,7 +1,3 @@
-<?php
-  SESSION_start();
-?>
-
 <!doctype html>
 <html lang="pt-br">
 
@@ -68,10 +64,11 @@
           </span>
         </div>
 
-        <form class="login100-form validate-form" action="consultaLogin.php" method="POST">
+        <form class="login100-form validate-form" action="login.php" method="POST">      
+
           <div class="wrap-input100 validate-input m-b-26" data-validate="Campo Obrigatório">
             <span class="label-input100">Usuário</span>
-            <input class="input100" type="text" name="usuario" placeholder="Insira seu usuário.">
+            <input class="input100" type="text" name="login" placeholder="Insira seu usuário.">
             <span class="focus-input100"></span>
           </div>
 
