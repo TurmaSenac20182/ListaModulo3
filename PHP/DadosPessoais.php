@@ -4,20 +4,20 @@
 require "conexao.php";
 
 session_Start();
-$usuario=$_SESSION['login'];
-$query= "select * from funcionario where login='{$usuario}'";
-$result=mysqli_query(conexao(),$query);
-$dados=mysqli_fetch_assoc($result); 
+$usuario = $_SESSION['login'];
+$query = "select * from funcionario where login = '{$usuario}'";
+$result = mysqli_query(conexao(),$query);
+$dados = mysqli_fetch_assoc($result); 
 
-$Nome=($dados['nome']);
-$login=($dados['login']);
-$Senha=($dados['senha']);
-$Email=($dados['email']);
-$Função=($dados['FK_funcao']);
-$Setor=($dados['FK_setor']);
-$Turno=($dados['FK_turno']);
-$Matrícula=($dados['matricula']);
-$Ramal=($dados['ramal']);
+$Nome = ($dados['nome']);
+$login = ($dados['login']);
+$Senha = ($dados['senha']);
+$Email = ($dados['email']);
+$Função = ($dados['FK_funcao']);
+$Setor = ($dados['FK_setor']);
+$Turno = ($dados['FK_turno']);
+$Matrícula = ($dados['matricula']);
+$Ramal = ($dados['ramal']);
 
 ?>
 
@@ -30,27 +30,27 @@ $Ramal=($dados['ramal']);
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="/Prototitpo/imagens/icons/favicon.ico"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/Prototitpo/vendor/bootstrap/css/bootstrap-grid.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/Prototitpo/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/Prototitpo/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/Prototitpo/vendor/animate/animate.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/Prototitpo/vendor/css-hamburgers/hamburgers.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/Prototitpo/vendor/animsition/css/animsition.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/Prototitpo/vendor/select2/select2.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/Prototitpo/vendor/daterangepicker/daterangepicker.css">
-<!--===========================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/Prototitpo/css/cadastro.css">
-	<link rel="stylesheet" type="text/css" href="/Prototitpo/css/cadastro_util2.css">
-<!--===============================================================================================-->
+<link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/cadastro.css">
+	<link rel="stylesheet" type="text/css" href="css/cadastro_util2.css">
+	<!--===============================================================================================-->
 
 <!--Função para apenas Números-->
 	<script>
@@ -138,20 +138,22 @@ $Ramal=($dados['ramal']);
 					<span class="focus-input100"></span>
 				</div>
 				<div class="container-contact100-form-btn">
-					<button class="contact100-form-btn" style="margin-right: 2%;z-index:999;">
+					<button type="submit" class="contact100-form-btn" style="margin-right: 2%;z-index:999;">
 						<span>
 							Alterar
 							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
 						</span>	
 					</button>
-
-					<button class="contact100-form-btn2" type="reset" style="margin-left: 1%;z-index:999;">
+				</form>
+				<form action="PaginaConsulta.php">
+					<button class="contact100-form-btn2" type="submit" style="margin-left: 1%;z-index:999;">	
 						<span>
 							Cancelar
-						</span>	
+						</span>
 					</button>
+				</form>
 				</div>
-			</form>
+			
 		</div>
 	</div>
 	

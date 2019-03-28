@@ -14,9 +14,11 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
   $turno = $_POST['turno'];
 
   if(insert($matricula,$login,$senha,$nome,$email,$ramal,$setor,$funcao,$turno)){
-    echo 'Cadastro realizado com sucesso!';
+    header('location: index.php');
+  } else {
+    echo "Não foi possível realizar o cadastro";
+    die;
   }
 
-  //header('location: #');
 }
 
