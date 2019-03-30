@@ -65,7 +65,7 @@ function insert($matricula,$login,$senha,$nome,$email,$ramal,$setor,$funcao,$tur
 function consutaSetor($Setor)
 {
  $link = conexao();
- $query = "select * from VW_CONSULTA_GERAL where  descricao '%{$Setor}%'";
+ $query = "select * from VW_CONSULTA_GERAL where  Setor like '%{$Setor}%'";
  $result = mysqli_query($link, $query);
  $dados = array();
  while($registro = mysqli_fetch_assoc($result)) {

@@ -70,17 +70,17 @@
 							<thead>						
 								<tr class="filters">
 								<form class="login100-form validate-form " action="consultaPorNome.php" method="GET">
-									<th><input type="text" class="input100" name="Nome" placeholder="NOME" disabled></th>
+									<th><input type="text" class="input100" name="Nome" placeholder="NOME" disabled required></th>
 									<th><button class="btn login200-form-btn" type="submit"
 											data-column="column2">Consultar</button></th>
 								</form>
 								<form class="login100-form validate-form " action="consultaPorSetor.php" method="GET">
-									<th><input type="text" class="input100" name="Setor" placeholder="SETOR" disabled></th>
+									<th><input type="text" class="input100" name="Setor" placeholder="SETOR" disabled required></th>
 									<th><button class="btn login200-form-btn" type="submit"
 											data-column="column3">Consultar</button></th>
 								</form>
 								<form class="login100-form validate-form " action="consultaPorRamal.php" method="GET">
-									<th><input type="text" class="input100" name="ramal" placeholder="RAMAL" disabled></th>
+									<th><input type="text" class="input100" name="ramal" placeholder="RAMAL" disabled required></th>
 									<th><button class="btn login200-form-btn" type="submit"
 											data-column="column4">Consultar</button></th>
 								</form>
