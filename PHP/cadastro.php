@@ -1,5 +1,12 @@
 <?php
-  SESSION_start();
+SESSION_start();
+if(!$_SESSION{'login'})
+{
+	header("location: index.php ");
+}
+include "funcoes.php";
+$dados = ConsultaGeral();
+
 ?>
 
 <!DOCTYPE html>

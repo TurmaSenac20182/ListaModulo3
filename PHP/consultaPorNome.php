@@ -1,4 +1,16 @@
 <?php
+
+
+SESSION_start();
+if(!$_SESSION{'login'})
+{
+	header("location: index.php ");
+}
+include "funcoes.php";
+$dados = ConsultaGeral();
+?> 
+
+
 include "funcoes.php";
 if($_SERVER['REQUEST_METHOD'] === 'GET') 
 {

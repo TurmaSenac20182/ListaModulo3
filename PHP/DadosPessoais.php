@@ -1,5 +1,14 @@
 <?php 
 
+SESSION_start();
+if(!$_SESSION{'login'})
+{
+	header("location: index.php ");
+}
+include "funcoes.php";
+$dados = ConsultaGeral();
+?>
+
 require "conexao.php";
 
 session_Start();
@@ -18,6 +27,9 @@ $Turno = ($dados['FK_turno']);
 $Matrícula = ($dados['matricula']);
 $Ramal = ($dados['ramal']);
 ?>
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -89,13 +101,7 @@ $Ramal = ($dados['ramal']);
 						<span class="label-input100">Usuario:</span>
 						<input class="input100" type="text" name="usuario" maxlength="20" value="<?php echo $login;?>">
 						<span class="focus-input100"></span>
-					</div>
-
-					<div class="wrap-input100 validate-input" data-validate="Campo Obrigatório">
-						<span class="label-input100">Senha:</span>
-						<input class="input100" type="password" name="password" maxlength="15" value="<?php echo $senha;?>">
-						<span class="focus-input100"></span>
-					</div>
+					</div>				
 
 					<div class="wrap-input100 validate-input" data-validate="Insira um Email válido: ex@abc.com">
 						<span class="label-input100">Email:</span>
@@ -104,39 +110,22 @@ $Ramal = ($dados['ramal']);
 					</div>
 
 
-					<div class="wrap-input100 validate-input" data-validate="Campo Obrigatório">
-					<span class="label-input100">Setor:</span>
-					<select name="setor" class="input300">
-						<option selected>Selecione</option>
-						<option value="1">Administração</option>
-						<option value="2">Tecnologia</option>
-						<option value="3">Recepção</option>	
-						<option value="4">RH</option>				
-					</select>
-					<span class="focus-input300"></span>
-				</div>
+					<div class="wrap-input100 validate-input" data-validate="Insira um Email válido: ex@abc.com">
+						<span class="label-input100">Setor:</span>
+						<input class="input100" type="texte" name="setor" maxlength="60" value="<?php echo $Setor;?>">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate="Insira um Email válido: ex@abc.com">
+						<span class="label-input100">Funçao:</span>
+						<input class="input100" type="text" name="funcao" maxlength="60" value="<?php echo $Função;?>">
+						<span class="focus-input100"></span>
+					</div>
 
-				<div class="wrap-input100 validate-input" data-validate="Campo Obrigatório">
-					<span class="label-input100">Função:</span>
-					<select name="funcao" class="input300">
-						<option selected>Selecione</option>
-						<option value="1">Gerente</option>
-						<option value="2">Analista</option>
-						<option value="3">Técnico</option>	
-						<option value="4">Auxiliar</option>				
-					</select>
-					<span class="focus-input300"></span>
-				</div>
-
-				<div class="wrap-input100 validate-input" data-validate="Campo Obrigatório">
-					<span class="label-input100">Turno:</span>
-					<select name="turno" class="input300">
-						<option selected>Selecione</option>
-						<option value="1">Manhã</option>
-						<option value="2">Tarde</option>
-						<option value="3">Noite</option>				
-					</select>
-				</div>
+					<div class="wrap-input100 validate-input" data-validate="Insira um Email válido: ex@abc.com">
+						<span class="label-input100">Turno:</span>
+						<input class="input100" type="text" name="turno" maxlength="60" value="<?php echo $Turno;?>">
+						<span class="focus-input100"></span>
+					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Campo Obrigatório">
 						<span class="label-input100">Matrícula:</span>
