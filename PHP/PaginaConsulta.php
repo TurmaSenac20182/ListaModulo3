@@ -53,7 +53,7 @@
 					<a class="nav-link" href="#">Link</a>
 				</li>-->
 			</ul>
-			<a class="btn btn-outline-danger" href="deslogar.php" role="button"> Logout <i class="fas fa-sign-out-alt"></i>	</a>
+			<a class="btn btn-outline-danger" href="logout.php" role="button"> Logout <i class="fas fa-sign-out-alt"></i>	</a>
 			<!--<button type="button" class="btn btn-success my-2 my-sm-0" data-toggle="modal" data-target="#modalExemplo" style="margin-left: 1%;z-index:999;">Cadastrar-se</button>-->
 
 		</div>

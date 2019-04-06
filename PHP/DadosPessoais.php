@@ -7,11 +7,10 @@ if(!$_SESSION{'login'})
 }
 include "funcoes.php";
 $dados = ConsultaGeral();
-?>
 
-require "conexao.php";
+//require "conexao.php";
 
-session_Start();
+//session_Start();
 $usuario = $_SESSION['login'];
 $query = "select * from funcionario where login = '{$usuario}'";
 $result = mysqli_query(conexao(),$query);

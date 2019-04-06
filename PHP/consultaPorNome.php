@@ -7,11 +7,7 @@ if(!$_SESSION{'login'})
 	header("location: index.php ");
 }
 include "funcoes.php";
-$dados = ConsultaGeral();
-?> 
 
-
-include "funcoes.php";
 if($_SERVER['REQUEST_METHOD'] === 'GET') 
 {
     $dados = consutaNome($_GET['Nome']) ;
@@ -40,8 +36,7 @@ if($_SERVER['REQUEST_METHOD'] === 'GET')
 <!--===============================================================================================-->
 </head>
 <body>
-    
-<?php foreach ($dados as $lista) { ?> 
+
 	<div class="limiter">
 		<div class="container-table100">
 			<div class="wrap-table100">				
@@ -57,6 +52,7 @@ if($_SERVER['REQUEST_METHOD'] === 'GET')
 								<th class="column100 column8" data-column="column8">Ramal</th>
 							</tr>
 						</thead>
+						<?php foreach ($dados as $lista) { ?> 
 						<tbody>
 							<tr class="row100">
 								<td class="column100 column1" data-column="column1"> <?= $lista['matricula'] ?> </td>
@@ -66,17 +62,17 @@ if($_SERVER['REQUEST_METHOD'] === 'GET')
 								<td class="column100 column5" data-column="column5"> <?= $lista['Setor'] ?> </td>
 								<td class="column100 column6" data-column="column6"> <?= $lista['ramal'] ?> </td>								
                             </tr>
-                            
 						</tbody>
+						<?php
+							}
+						?>
 					</table>
 				</div>				
 			</div>
 		</div>
 	</div>
 
-    <?php
-    }
-    ?>
+
 	
 
 <!--===============================================================================================-->	
