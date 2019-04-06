@@ -34,6 +34,29 @@ if($_SERVER['REQUEST_METHOD'] === 'GET')
 	<link rel="stylesheet" type="text/css" href="css/table.css">
 	<link rel="stylesheet" type="text/css" href="css/table_ultil.css">
 <!--===============================================================================================-->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--===============================================================================================-->
+<link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/cadastro.css">
+	<link rel="stylesheet" type="text/css" href="css/cadastro_util2.css">
+	<!--===============================================================================================-->
 </head>
 <body>
 
@@ -67,6 +90,11 @@ if($_SERVER['REQUEST_METHOD'] === 'GET')
 							}
 						?>
 					</table>
+					<form action="PaginaConsulta.php" method="post" class="contact100-form validate-form">
+						<div class="container-contact100-form-btn">
+							<button type="submit" class="contact100-form-btn"><span>Voltar</span></button>
+						</div>
+					</form>
 				</div>				
 			</div>
 		</div>
